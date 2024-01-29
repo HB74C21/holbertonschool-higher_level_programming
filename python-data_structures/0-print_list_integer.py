@@ -2,5 +2,5 @@
 def print_list_integer(my_list=[]):
     count = 0
     while count < len(my_list):
-        print("{}".format(my_list[count]))
+        print("{:d}".format(my_list[count]))
         count += 1

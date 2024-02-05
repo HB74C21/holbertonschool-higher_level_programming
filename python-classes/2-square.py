@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """a class Square that defines a square"""
 
+
 class Square:
     """A class for squares"""
     def __init__(self, size=0):

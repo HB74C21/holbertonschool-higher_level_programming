@@ -1,0 +1,26 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# Test with a simple text containing '.', '?', and ':'
+>>> text_indentation("Hello. How are you? I'm fine: thank you.")
+Hello
+How are you
+I'm fine
+thank you
+
+# Test with an empty text
+>>> text_indentation("")
+
+# Test with text containing only one character '.'
+>>> text_indentation(".")
+.
+
+# Test with text containing only one character '?'
+>>> text_indentation("?")
+?
+# Test with text containing only one character ':'
+>>> text_indentation(":")
+:
+
+# Test with text containing no '.', '?', or ':'
+>>> text_indentation("This is a simple text without any special characters.")
+This is a simple text without any special characters.

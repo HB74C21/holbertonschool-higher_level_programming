@@ -1,12 +1,11 @@
 #!/usr/bin/python
-"""This module defines a Rectangle class"""
+""" This module defines a Rectangle class """
 
 
 class Rectangle:
-    """Represents a rectangle"""
+    """ Represents a rectangle """
 
     def __init__(self, width=0, height=0):
-        """ """
         self.width = width
         self.height = height
 
@@ -19,6 +18,7 @@ class Rectangle:
         self.__width = value
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
+
         if self.__width < 0:
             raise ValueError("width must be >= 0")
 
@@ -38,7 +38,7 @@ class Rectangle:
         perimeter = (self.height + self.__width) * 2
 
         if self.__width == 0 or self.__height == 0:
-            self.perimeter = 0
+            perimeter = 0
 
         return perimeter
 

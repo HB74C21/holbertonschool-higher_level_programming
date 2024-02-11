@@ -1,10 +1,15 @@
 #!/usr/bin/python3
 """
-    Matrix Division Function
+function that divides
+all elements
+of a matrix
 """
 
 
 def matrix_divided(matrix, div):
+    """
+    Divide all elements of a matrix by a divisor
+    """
     if not isinstance(matrix, list) \
         or not all(isinstance(row, list)
                    and all(isinstance(element, (int, float))

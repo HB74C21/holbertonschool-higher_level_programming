@@ -1,3 +1,5 @@
+#2-matrix_divided.py
+
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 This test checks if the function correctly divides each element of a matrix by a given divisor.
@@ -42,3 +44,23 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 >>> print(matrix_divided(matrix, 2))
 Traceback (most recent call last):
 TypeError: Each row of the matrix must have the same size
+
+# Test 6: Raise an exception if the matrix rows are not of the same size
+>>> matrix_divided([[1, 2], [3, 4, 5]], 2)
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the same size
+
+# Test 7: Raise an exception if the matrix contains non-numeric elements
+>>> matrix_divided([[1, 2], [3, "4"]], 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Test 8: Division with an empty matrix
+>>> matrix_divided([], 2)
+[]
+
+# Test 9: Division with empty sublists
+>>> matrix_divided([[], []], 2)
+[[], []]

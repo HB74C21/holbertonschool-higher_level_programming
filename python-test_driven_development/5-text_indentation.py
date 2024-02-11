@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 """
-    This module defines a function to print
-    a text with 2 new lines after each
-    occurrence of '.', '?' and ':'
+This module defines a function to print
+a text with 2 new lines after each
+occurrence of '.', '?' and ':'
 """
 
 
 def text_indentation(text):
     """
-        Prints a text with 2 new lines after each occurrence of '.', '?' and ':'
+    Prints a text with 2 new lines after each occurrence of '.', '?' and ':'
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
@@ -26,4 +26,3 @@ def text_indentation(text):
         else:
             print(f"{char}", end="")
             new_line = False
-    print()

@@ -1,12 +1,14 @@
 #!/usr/bin/python3
 """
-    Ce script définit une fonction pour imprimer un carré avec le caractère #
+This script defines
+a function to print
+a square with the character: #
 """
 
 
 def print_square(size):
     """
-        Imprime un carré avec le caractère
+    Print a square with the character #
     """
     if not isinstance(size, int):
         raise TypeError("size must be an integer")

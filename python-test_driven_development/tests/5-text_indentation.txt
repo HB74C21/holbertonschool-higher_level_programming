@@ -1,26 +1,21 @@
+#5-text_indentation.py
+
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
-# Test with a simple text containing '.', '?', and ':'
->>> text_indentation("Hello. How are you? I'm fine: thank you.")
-Hello
-How are you
-I'm fine
-thank you
+# Test where text contains no '.', '?' or ':'
+>>> text_indentation("This is a test sentence")
+This is a test sentence
 
 # Test with an empty text
 >>> text_indentation("")
+<BLANKLINE>
 
-# Test with text containing only one character '.'
->>> text_indentation(".")
-.
+# Test when we have more one string
+>>> text_indentation("I am", "football", "holberton")
+Traceback (most recent call last):
+TypeError: text_indentation() takes 1 positional argument but 3 were given
 
-# Test with text containing only one character '?'
->>> text_indentation("?")
-?
-# Test with text containing only one character ':'
->>> text_indentation(":")
-:
-
-# Test with text containing no '.', '?', or ':'
->>> text_indentation("This is a simple text without any special characters.")
-This is a simple text without any special characters.
+Test where text is an empty string
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'

@@ -64,5 +64,5 @@ class Rectangle:
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
-    def are(self):
+    def area(self):
         return self.__width * self.__height

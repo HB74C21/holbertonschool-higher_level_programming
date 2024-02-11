@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-    This module defines a function to print a text with
-    2 new lines after each occurrence of '.', '?' and ':'
+This module defines a function to print
+a text with 2 new lines after each
+occurrence of '.', '?' and ':'
 """
 
 

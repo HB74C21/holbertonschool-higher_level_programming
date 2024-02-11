@@ -1,3 +1,4 @@
+# 0-add_integer.py
 >>> add_integer = __import__('0-add_integer').add_integer
 
 This test checks if the function correctly adds two integers.
@@ -22,6 +23,14 @@ This test checks if the function correctly handles missing input parameters.
 >>> print(add_integer(  ))
 Traceback (most recent call last):
 TypeError: add_integer() missing 1 required positional argument: 'a'
+
+>>> add_integer(float("inf"), 10)
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(0, float('nan'))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
 
 This test checks if the function correctly handles excess input parameters.
 >>> print(add_integer(100.3, -2, 4))

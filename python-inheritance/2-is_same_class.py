@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This script defines a function is_same_class that checks if an object belongs to the same class as another one.
+This script defines a function is_same_class that checks
+if an object belongs to the same class as another one.
 """
 
 

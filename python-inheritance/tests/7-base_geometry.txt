@@ -14,7 +14,7 @@ Test 2
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("my_int", 12)
 >>> try:
-...     bg.integer_validator("name", )
+...     bg.integer_validator("hzk")
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 [TypeError] BaseGeometry.integer_validator() missing 1 required positional argument: 'value'

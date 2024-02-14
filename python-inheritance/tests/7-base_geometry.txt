@@ -17,7 +17,7 @@ Test 2
 ...     bg.integer_validator("hzk")
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
-[TypeError] BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+[ValueError] BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
 
 Test 3
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
@@ -50,7 +50,7 @@ Test 4
 >>> 
 >>> bg.integer_validator()
 Traceback (most recent call last):
-TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+VakueError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 Test 5
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry

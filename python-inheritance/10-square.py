@@ -22,4 +22,4 @@ class Square(Rectangle):
         """
         Returns a string representation of the rectangle.
         """
-        return self.__size * self.__size
+        return self.__size ** 2

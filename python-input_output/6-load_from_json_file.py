@@ -11,7 +11,7 @@ def load_from_json_file(filename):
     """
     Load a JSON file into a Python object.
     """
-    with open(filename) as fd:
+    with open(filename, "r") as fd:
         data = json.load(fd)
 
         return data

@@ -1,11 +1,14 @@
 #!/usr/bin/python3
-""" Unittest for file base.py"""
+"""
+Unittest for file base.py
+"""
 import unittest
 from models.base import Base
 
 
 class TestBase(unittest.TestCase):
     """Class representing a test case."""
+
     def setUp(self):
         """Set up method to initialize objects before each test."""
         Base._Base__nb_objects = 0

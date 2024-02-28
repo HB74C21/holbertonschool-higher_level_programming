@@ -1,7 +1,14 @@
+#!/usr/bin/python3
+"""
+Unittest for file rectangle.py.
+"""
+
 import unittest
 from models.rectangle import Rectangle
 
+
 class TestRectangle(unittest.TestCase):
+    """Class representing a test case for Rectangle class."""
 
     def test_constructor(self):
         """Test the constructor of Rectangle."""

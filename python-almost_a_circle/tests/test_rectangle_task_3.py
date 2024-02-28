@@ -46,20 +46,21 @@ class TestRectangle(unittest.TestCase):
     def test_invalid_width(self):
         """Test for invalid width values."""
         with self.assertRaises(TypeError):
-            r = Rectangle("invalid", 10, 2, 3, 1)
+            Rectangle("invalid", 10, 2, 3, 1)
         with self.assertRaises(ValueError):
-            r = Rectangle(0, 10, 2, 3, 1)
+            Rectangle(0, 10, 2, 3, 1)
         with self.assertRaises(ValueError):
-            r = Rectangle(-5, 10, 2, 3, 1)
+            Rectangle(-5, 10, 2, 3, 1)
 
     def test_invalid_height(self):
         """Test for invalid height values."""
         with self.assertRaises(TypeError):
-            r = Rectangle(5, "invalid", 2, 3, 1)
+            Rectangle(5, "invalid", 2, 3, 1)
         with self.assertRaises(ValueError):
-            r = Rectangle(5, 0, 2, 3, 1)
+            Rectangle(5, 0, 2, 3, 1)
         with self.assertRaises(ValueError):
-            r = Rectangle(5, -10, 2, 3, 1)
+            Rectangle(5, -10, 2, 3, 1)
+
 
 if __name__ == '__main__':
     unittest.main()

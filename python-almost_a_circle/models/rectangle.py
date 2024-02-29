@@ -86,8 +86,10 @@ class Rectangle(Base):
 
     def display(self):
         """Display the rectangle on the console"""
-        for i in range(self.__height):
-            print("#" * self.__width)
+        for i in range(self.y):
+            print()
+        for i in range(self.height):
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self):
         """Return a string representation of the Rectangle"""

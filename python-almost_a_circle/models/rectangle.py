@@ -100,8 +100,8 @@ class Rectangle(Base):
         """Update one or more attributes of the rectangle"""
         if args:
             attribut = ['id', 'width', 'height', 'x', 'y']
-            for attribut, value in zip(attribut, args):
-                setattr(self, attribut, value)
+            for index, value in zip(attribut, args):
+                setattr(self, index, value)
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)

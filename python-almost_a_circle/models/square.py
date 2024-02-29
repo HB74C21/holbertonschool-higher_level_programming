@@ -17,10 +17,8 @@ class Square(Rectangle):
         self.size = size
         self.x = x
         self.y = y
-        self.width = size
-        self.height = size
 
-        super().__init__(self.width, self.height, self.x, self.y, id)
+        super().__init__(self.size, self.size, self.x, self.y, id)
 
     def __str__(self):
         """Return a string representation of the Square object."""

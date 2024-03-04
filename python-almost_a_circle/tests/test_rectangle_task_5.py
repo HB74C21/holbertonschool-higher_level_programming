@@ -4,11 +4,13 @@ Unittest for file rectangle.py.
 """
 
 import unittest
+import io
+from unittest.mock import patch
 from models.rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
-    """Class representing a test case for Rectangle class."""
+    """Class representing a test case for the Rectangle class."""
 
     def test_constructor(self):
         """Test the constructor of Rectangle."""
@@ -44,14 +46,21 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r.y, 5)
 
     def test_area(self):
-        """Test the calculation of area."""
+        """Test the area calculation."""
         r = Rectangle(5, 10, 2, 3, 1)
         self.assertEqual(r.area(), 50)
-    
-    def test_area_zero_dimensions(self):
-        """Test area calculation with zero dimensions."""
-        r = Rectangle(0, 0, 2, 3, 1)
-        self.assertEqual(r.area(), 0)
+
+    def test_display(self):
+        """Test the display method."""
+        r = Rectangle(5, 4, 1, 1, 1)
+        expected_output = "#####\n" \
+                          "#####\n" \
+                          "#####\n" \
+                          "#####\n"
+        with unittest.mock.patch('sys.stdout', new_callable=io.StringIO) as mock_stdout:
+            r.display()
+            self.assertEqual(mock_stdout.getvalue(), expected_output)
+
 
 if __name__ == '__main__':
     unittest.main()

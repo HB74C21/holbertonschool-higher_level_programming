@@ -11,8 +11,8 @@ if __name__ == "__main__":
     password = argv[2]
     db_name = argv[3]
     state_name = argv[4]
-    db = MySQLdb.connect(host='localhost', port=3306, user=username,
-                         passwd=password, db=db_name)
+    db = MySQLdb.connect(host='localhost', port=3306,
+                         user=username, passwd=password, db=db_name)
     cursor = db.cursor()
     select = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(
         state_name)
